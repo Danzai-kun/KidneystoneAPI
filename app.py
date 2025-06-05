@@ -43,13 +43,10 @@ def predict():
     file_path = os.path.join(UPLOAD_FOLDER, filename)
     file.save(file_path)
 
-    # Step 1: Preprocess and extract features
     features = extract_vgg16_features_from_uploaded_image(file_path)
 
-    # Step 2: Predict
     prediction = classifier.predict(features)[0][0]
 
-    # Step 3: Return result
     result = "Kidney Stone Detected" if prediction > 0.5 else "Normal"
     return f"Prediction: {result}"
 

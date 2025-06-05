@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head><title>Kidney Stone Prediction</title></head>
+<head><title>Kidney Stone Prediction</title>
+  <link rel="stylesheet" href="static/index.css">
+</head>
 <body>
+  <header>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="navbar-brand">Kidney Stone Prediction</a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+ </header>
+
   <h2>Upload CT Scan Image</h2>
-  <form action="/predict" method="POST" enctype="multipart/form-data">
-    <input type="file" name="image">
-    <button type="submit">Predict</button>
-  </form>
+  <section class="Section1">
+    <div class="Section1-content">
+     <p>Welcome to the Kidney Stone Prediction System</p>
+     <p>Upload a CT Scan Image of your kidney to predict if you have a kidney stone</p>
+    </div>
+  </section>
+
+   <form class="form" action="/predict" method="POST" enctype="multipart/form-data">
+     <input type="file" name="image">
+     <button type="submit">Predict</button>
+   </form>
+
+  <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="/privacy" class="footer-btn">Privacy Policy</a>
+            <a href="/terms" class="footer-btn">Terms of Service</a>
+            <a href="/contact" class="footer-btn">Contact Us</a>
+        </div>
+        <p class="copyright">&copy; 2025 Course Platform. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
