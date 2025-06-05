@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Kidney Stone Prediction</title>
+  <link rel="stylesheet" href="static/index.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+          <div class="nav-container">
+            <a href="/" class="navbar-brand">Kidney Stone Prediction</a>
+            <div class="nav-links">
+              <a href="/">Home</a>
+              <a href="{{ url_for('about') }}">About</a>
+              <a href="/contact">Contact</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+    <main>
+      <section class="hero">
+        <h2>About Our System</h2>
+        <p>
+          The Kidney Stone Prediction System is a cutting-edge diagnostic tool that leverages deep learning algorithms to analyze CT and MRI scans for signs of kidney stones. It was developed to assist healthcare professionals and patients in early diagnosis.
+        </p>
+        <p>
+          Our mission is to make healthcare smarter and more accessible by integrating AI into routine diagnostics, improving speed, accuracy, and patient outcomes.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-links">
+            <a href="/privacy" class="footer-btn">Privacy Policy</a>
+            <a href="/terms" class="footer-btn">Terms of Service</a>
+            <a href="/contact" class="footer-btn">Contact Us</a>
+          </div>
+          <p class="copyright">&copy;2025 Kidney Stone AI Predictor. All rights reserved.</p>
+        </div>
+    </footer>
+  </div>
+</body>
+</html>

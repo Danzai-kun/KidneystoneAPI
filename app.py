@@ -28,27 +28,30 @@ def extract_vgg16_features_from_uploaded_image(img_path):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', result=None)
 
 @app.route('/predict', methods=['POST'])
 def predict():
     if 'image' not in request.files:
-        return "No file uploaded", 400
+        return render_template('index.html', result="No file uploaded.")
 
     file = request.files['image']
     if file.filename == '':
-        return "No selected file", 400
+        return render_template('index.html', result="No selected file.")
 
     filename = f"{uuid.uuid4().hex}.jpg"
     file_path = os.path.join(UPLOAD_FOLDER, filename)
     file.save(file_path)
 
     features = extract_vgg16_features_from_uploaded_image(file_path)
-
     prediction = classifier.predict(features)[0][0]
-
     result = "Kidney Stone Detected" if prediction > 0.5 else "Normal"
-    return f"Prediction: {result}"
+
+    return render_template('index.html', result=result)
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
