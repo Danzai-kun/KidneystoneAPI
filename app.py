@@ -10,21 +10,22 @@ app = Flask(__name__)
 UPLOAD_FOLDER = 'static/uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
+# Load both models
 classifier = load_model('KidneyStone_model.h5')
+valid_classifier = load_model('ValidClassifier.h5')
 
+# Feature extractor
 base_model = VGG16(weights='imagenet', include_top=False, pooling='avg')
 feature_extractor = Model(inputs=base_model.input, outputs=base_model.output)
 
 IMG_SIZE = 224
 
-def extract_vgg16_features_from_uploaded_image(img_path):
-    img = image.load_img(img_path, target_size=(IMG_SIZE, IMG_SIZE))
-    img = img.convert('RGB')
+def extract_features(img_path):
+    img = image.load_img(img_path, target_size=(IMG_SIZE, IMG_SIZE)).convert('RGB')
     img_array = image.img_to_array(img)
     img_array = np.expand_dims(img_array, axis=0)
     img_array = preprocess_input(img_array)
-    features = feature_extractor.predict(img_array)
-    return features
+    return feature_extractor.predict(img_array)
 
 @app.route('/')
 def index():
@@ -43,7 +44,14 @@ def predict():
     file_path = os.path.join(UPLOAD_FOLDER, filename)
     file.save(file_path)
 
-    features = extract_vgg16_features_from_uploaded_image(file_path)
+    features = extract_features(file_path)
+
+    # Step 1: Validate image
+    is_valid = valid_classifier.predict(features)[0][0]
+    if is_valid > 0.5:
+        return render_template('index.html', result="Invalid image. Please upload a valid CT scan.")
+
+    # Step 2: Predict kidney stone
     prediction = classifier.predict(features)[0][0]
     result = "Kidney Stone Detected" if prediction > 0.5 else "Normal"
 
