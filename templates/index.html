@@ -20,27 +20,32 @@
 
 
 
-  <section class="Section1">
-    <div class="Section1-content">
+  <section class="Sec Section1-index">
+    <div class="Section1-content"><img src="static\photos\cover.jpg">
       <p>Welcome to the Kidney Stone Prediction System</p>
       
     </div>
   </section>
-  <h2>Upload CT Scan Image</h2>
-  <form class="form" action="/predict" method="POST" enctype="multipart/form-data">
-    <input type="file" name="image" required>
-    <button type="submit">Predict</button>
-  </form>
 
-  {% if result %}
-<section class="result-section">
-  <div class="result-box">
-    <h3>Prediction Result:</h3>
-    <p>{{ result }}</p>
-  </div>
-</section>
-{% endif %}
+  <section class="Sec Section2-index">
+   <h2>Upload CT Scan Image</h2>
 
+   <form class="form" action="/predict" method="POST" enctype="multipart/form-data">
+     <input type="file" name="image" required>
+      <button type="submit">Predict</button>
+   </form>
+  
+
+ 
+   {% if result %}
+    <section class="result-section">
+     <div class="result-box">
+      <h3>Prediction Result:</h3>
+       <p>{{ result }}</p>
+     </div>
+    </section>
+   {% endif %}
+  </section>
 
   <footer class="footer">
     <div class="footer-content">

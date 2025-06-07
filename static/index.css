@@ -1,6 +1,6 @@
-/* Navbar styling */
+/* Navbar styling  common for all*/
 .navbar {
-    background-color: #2c3e50;
+    background-color:#97c6f5;
     padding: 1rem 2rem;
 }
 .nav-container {
@@ -29,7 +29,7 @@
     color: #3498db;
 }
 
-/* Footer styling */
+/* Footer styling common for all */
 .footer {
     color: white;
     padding: 1rem 2rem;
@@ -53,4 +53,60 @@
 .copyright {
     color: #666;
     font-size: 0.9rem;
+}
+
+/*-----------------------------------------index.html page design----------------------------------------- */
+.Sec
+{
+    background-color:  #97c6f5;
+    border-radius: 10px;
+    padding:2%;
+    margin:7% 5% 0% 5%;
+}
+
+
+
+/*----------------------------------------- About.html page design -----------------------------------------*/
+.Section1-div
+{ 
+  background-color:  #2c3e50;
+  border-radius: 10px;
+  padding:2%;
+  margin:7% 5% 0% 5%;
+}
+.Section1-div-h3
+{
+    font-size:30px;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+.para
+{
+  font-family: Arial, sans-serif;
+  font-size:20px;
+  color: #ffffff;
+}
+
+.Section2
+{
+  padding:2%;
+  margin:0% 5% 0% 5%;
+}
+.Section2-div1-h2
+{
+  font-size:32px;
+  color: #242424;
+}
+
+.info-h2
+{
+  font-size: 21px;
+  color: #2a2a29;
+}
+
+/* Div */
+.Div-h1
+{
+  margin:0% 0% 0% 43%;
 }
