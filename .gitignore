@@ -3,5 +3,5 @@
 /KidneyStone_model.h5
 /ValidClassifier.h5
 /static/photos
-# py -3.11 -m venv venv311
+
 # .\venv311\Scripts\activate

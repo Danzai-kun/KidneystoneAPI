@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title>Terms and Conditions - Kidney Stone Prediction</title>
+  <link rel="stylesheet" href="static/index.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <div class="nav-container">
+            <a href="/" class="navbar-brand">Kidney Stone Prediction</a>
+            <div class="nav-links">
+              <a href="/">Home</a>
+              <a href="{{ url_for('about') }}">About</a>
+              <a href="/contact">Contact</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+  <h1>Terms and Conditions</h1>
+  <p>By using this website, you agree to the following terms:</p>
+  <ul>
+    <li>This system is for educational and demonstration purposes only and is not intended for clinical or diagnostic use.</li>
+    <li>The developers take no responsibility for any medical decisions made based on the results provided by this system.</li>
+    <li>You must not upload any image containing personal data, copyrighted material, or offensive content.</li>
+  </ul>
+  <p>These terms may be updated at any time without prior notice.</p>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="{{ url_for('privacypolicy') }}" class="footer-btn">Privacy Policy</a>
+        <a href="/contact" class="footer-btn">Contact Us</a>
+      </div>
+      <p class="copyright">&copy;2025 Kidney Stone AI Predictor. All rights reserved.</p>
+    </div>
+ </footer> 
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title>Privacy Policy - Kidney Stone Prediction</title>
+  <link rel="stylesheet" href="static/index.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <div class="nav-container">
+            <a href="/" class="navbar-brand">Kidney Stone Prediction</a>
+            <div class="nav-links">
+              <a href="/">Home</a>
+              <a href="{{ url_for('about') }}">About</a>
+              <a href="/contact">Contact</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+  <h1>Privacy Policy</h1>
+  <section class="Sec Section-1PP">
+    <div class = "Section-div-1PP">
+      <p class = "Section-P">We respect your privacy. This website does not store any uploaded images permanently. 
+        All uploaded files are used solely for prediction and are deleted automatically after processing.</p>
+      </div>
+  </section>
+  <section class="Sec Section-2PP">
+    <p class = "Section-P">No personal data is collected, stored, or shared with any third party.</p>
+    <p class = "Section-P">This system is intended strictly for academic and research purposes only.</p>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="{{ url_for('termscondition') }}" class="footer-btn">Terms of Service</a>
+        <a href="/contact" class="footer-btn">Contact Us</a>
+      </div>
+      <p class="copyright">&copy;2025 Kidney Stone AI Predictor. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

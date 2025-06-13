@@ -21,37 +21,37 @@
 
 
   <section class="Sec Section1-index">
-    <div class="Section1-content"><img src="static\photos\cover.jpg">
-      <p>Welcome to the Kidney Stone Prediction System</p>
+    <div class="Section1-content">
+      <h1><p class ="Section1-index-p">Welcome to the Kidney Stone Prediction System</p></h1>
       
     </div>
-  </section>
+  </section>    
 
   <section class="Sec Section2-index">
-   <h2>Upload CT Scan Image</h2>
+    <div class="Section2-index-div1">
+     <h2>Upload CT Scan Image</h2>
 
-   <form class="form" action="/predict" method="POST" enctype="multipart/form-data">
-     <input type="file" name="image" required>
-      <button type="submit">Predict</button>
-   </form>
-  
-
+      <form class="form" action="/predict" method="POST" enctype="multipart/form-data">
+       <input type="file" name="image" required>
+        <button type="submit">Predict</button>
+       </form>
  
-   {% if result %}
-    <section class="result-section">
-     <div class="result-box">
-      <h3>Prediction Result:</h3>
-       <p>{{ result }}</p>
-     </div>
-    </section>
-   {% endif %}
+      {% if result %}
+       <section class="result-section">
+        <div class="result-box">
+         <h3>Prediction Result:</h3>
+          <p>{{ result }}</p>
+        </div>
+       </section>
+      {% endif %}
+      </div>
   </section>
 
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-links">
-        <a href="/privacy" class="footer-btn">Privacy Policy</a>
-        <a href="/terms" class="footer-btn">Terms of Service</a>
+        <a href="{{ url_for('privacypolicy') }}" class="footer-btn">Privacy Policy</a>
+        <a href="{{ url_for('termscondition') }}" class="footer-btn">Terms of Service</a>
         <a href="/contact" class="footer-btn">Contact Us</a>
       </div>
       <p class="copyright">&copy;2025 Kidney Stone AI Predictor. All rights reserved.</p>

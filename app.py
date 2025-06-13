@@ -10,11 +10,9 @@ app = Flask(__name__)
 UPLOAD_FOLDER = 'static/uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-# Load both models
 classifier = load_model('KidneyStone_model.h5')
 valid_classifier = load_model('ValidClassifier.h5')
 
-# Feature extractor
 base_model = VGG16(weights='imagenet', include_top=False, pooling='avg')
 feature_extractor = Model(inputs=base_model.input, outputs=base_model.output)
 
@@ -44,22 +42,33 @@ def predict():
     file_path = os.path.join(UPLOAD_FOLDER, filename)
     file.save(file_path)
 
-    features = extract_features(file_path)
+    try:
+        features = extract_features(file_path)
 
-    # Step 1: Validate image
-    is_valid = valid_classifier.predict(features)[0][0]
-    if is_valid > 0.5:
-        return render_template('index.html', result="Invalid image. Please upload a valid CT scan.")
+        is_valid = valid_classifier.predict(features)[0][0]
+        if is_valid > 0.5:
+            result = "Invalid image. Please upload a valid CT scan."
+        else:
+            prediction = classifier.predict(features)[0][0]
+            result = "Kidney Stone Detected" if prediction > 0.5 else "Normal"
 
-    # Step 2: Predict kidney stone
-    prediction = classifier.predict(features)[0][0]
-    result = "Kidney Stone Detected" if prediction > 0.5 else "Normal"
+        return render_template('index.html', result=result)
 
-    return render_template('index.html', result=result)
+    finally:
+        if os.path.exists(file_path):
+            os.remove(file_path)
 
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+@app.route('/privacypolicy')
+def privacypolicy():
+    return render_template('privacypolicy.html')
+
+@app.route('/termscondition')
+def termscondition():
+    return render_template('termscondition.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
