@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="static/index.css">
+</head>
+<body> 
+
+    <header>
+        <nav class="navbar">
+          <div class="nav-container">
+            <a href="/" class="navbar-brand">Kidney Stone Prediction</a>
+            <div class="nav-links">
+              <a href="{{ url_for('about') }}">About</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+    <h1>Contact Us</h1>
+      <section class="Sec">
+        <p class="para Section1-CU-P">If you have any questions, feedback, or inquiries about the Kidney Stone Prediction system, feel free to get in touch with us using the details below:</p>
+      </section>
+
+    <section class = "Section-CU">
+        <h3 class="Para Section-CU-h3">Contact Information</h3>
+            <p class="Para Section-CU-p"><strong>Developer:</strong> John Snow</p>
+            <p class="Para Section-CU-p"><strong>Email:</strong> snowjohn@gmail.com</p>
+            <p class="Para Section-CU-p"><strong>Phone:</strong> +91-9876543210</p>
+    </section>
+
+    <section class = "Section-CU">
+        <h3 class="Para Section-CU-h3">Assam India</h3>
+            <p class="Para Section-CU-p">Department of Computer Applications,<br>
+                XYZ University,<br>
+                Shillong, Meghalaya, India</p>
+    </section>
+
+    <section class = "Section-CU"> 
+
+            <h3 class="Para Section-CU-h3">Support Hours</h3>
+            <p class="Para Section-CU-p">Monday to Friday: 10:00 AM – 5:00 PM IST<br>
+            (Excluding public holidays)</p>
+            <p class="Para Section-CU-p">We aim to respond to all queries within 24–48 hours.</p>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="{{ url_for('privacypolicy') }}" class="footer-btn">Privacy Policy</a>
+                <a href="{{ url_for('termscondition') }}" class="footer-btn">Terms of Service</a>
+            </div>
+          <p class="copyright">&copy;2025 Kidney Stone AI Predictor. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

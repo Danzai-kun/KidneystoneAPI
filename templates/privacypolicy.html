@@ -11,7 +11,6 @@
             <div class="nav-links">
               <a href="/">Home</a>
               <a href="{{ url_for('about') }}">About</a>
-              <a href="/contact">Contact</a>
             </div>
           </div>
         </nav>
@@ -25,18 +24,20 @@
       </div>
   </section>
   <section class="Sec Section-2PP">
-    <p class = "Section-P">No personal data is collected, stored, or shared with any third party.</p>
-    <p class = "Section-P">This system is intended strictly for academic and research purposes only.</p>
-  </section>
+    <div class = "Section-div-1PP">
+        <p class = "Section-P">No personal data is collected, stored, or shared with any third party.</p>
+        <p class = "Section-P">This system is intended strictly for academic and research purposes only.</p>
+    </div>
+   </section>
 
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-links">
         <a href="{{ url_for('termscondition') }}" class="footer-btn">Terms of Service</a>
-        <a href="/contact" class="footer-btn">Contact Us</a>
+        <a href="{{ url_for('contactus') }}" class="footer-btn">Contact Us</a>
       </div>
       <p class="copyright">&copy;2025 Kidney Stone AI Predictor. All rights reserved.</p>
     </div>
-  </footer>
+  </footer> 
 </body>
 </html>

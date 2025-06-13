@@ -12,7 +12,6 @@
         <a href="/" class="navbar-brand">Kidney Stone Prediction</a>
         <div class="nav-links">
           <a href="{{ url_for('about') }}">About</a>
-          <a href="/contact">Contact</a>
         </div>
       </div>
     </nav>
@@ -52,7 +51,7 @@
       <div class="footer-links">
         <a href="{{ url_for('privacypolicy') }}" class="footer-btn">Privacy Policy</a>
         <a href="{{ url_for('termscondition') }}" class="footer-btn">Terms of Service</a>
-        <a href="/contact" class="footer-btn">Contact Us</a>
+        <a href="{{ url_for('contactus') }}" class="footer-btn">Contact Us</a>
       </div>
       <p class="copyright">&copy;2025 Kidney Stone AI Predictor. All rights reserved.</p>
     </div>

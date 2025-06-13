@@ -166,7 +166,59 @@
 
 .Section-P
 { 
-    text-align: center;
-    font-size:30px;
     font-family: Arial, sans-serif;
+    font-size:20px;
+    font-family: Arial, sans-serif;
+}
+
+/*----------------------------------------- Terms and condition page design -----------------------------------------*/
+.Section-div-1TC
+{
+    background-color:  #ffffff;
+    border-radius: 1rem;
+    padding: 3% 3% 3% 3%;
+    font-size: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.Section-1TC-p
+{ 
+    font-family: Arial, sans-serif;
+    font-size:20px;
+    font-family: Arial, sans-serif;
+}
+
+.Section-2TC
+{
+    background-color: #ffffff;
+}
+
+/*----------------------------------------- Contact Us page design -----------------------------------------*/
+
+.Section-CU
+{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding-top: 0.1%;
+    padding-left: 5%;
+    margin: 3% 3% 3% 3%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    min-width: 200px;
+}
+
+.Para
+{ 
+    font-family: Arial, sans-serif;
+    font-size:20px;
+    font-family: Arial, sans-serif;
+}
+
+.Section-CU-h3
+{
+    font-size:30px;
+}
+
+.Section1-CU-P
+{
+    font-size:25px;
 }

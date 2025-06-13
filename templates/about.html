@@ -14,8 +14,6 @@
             <a href="/" class="navbar-brand">Kidney Stone Prediction</a>
             <div class="nav-links">
               <a href="/">Home</a>
-              <a href="{{ url_for('about') }}">About</a>
-              <a href="/contact">Contact</a>
             </div>
           </div>
         </nav>
@@ -38,7 +36,7 @@
       <div class="Section2-div1">
           <p class=" para"><h2 class="Section2-div1-h2">What is Kidey Stone Prediction</h2> 
               <ul>
-                  <li class="para l1">What it is and why it matters?</li> 
+                  <li class="para l1">What is Kidney stone prediction?</li> 
                   <li class="para l2">What we're trying to solve.</li> 
                   <li class="para l3">How It Works</li> 
                   <li class="para l4">Disclaimer (Important for medical tools)</li> 
@@ -48,8 +46,8 @@
               <p class="para para4">Take a tour to explore our website.</p>
 
               <!-- info about the application------------------------------------------- -->
-              <h2 class="info-h2">contents to add</h2>
-              <p class="para para16">contents to add
+              <h2 class="info-h2">What is Kidney stone prediction?</h2>
+              <p class="para para16">Kideny Stone Prediction is a website intended help leverage the 
               </p>
               <h2 class="info-h2">contents to add</h2>
               <p class="para para17">contents to add
@@ -65,9 +63,9 @@
     <footer class="footer">
         <div class="footer-content">
           <div class="footer-links">
-            <a href="/privacy" class="footer-btn">Privacy Policy</a>
-            <a href="/terms" class="footer-btn">Terms of Service</a>
-            <a href="/contact" class="footer-btn">Contact Us</a>
+            <a href="{{ url_for('privacypolicy') }}" class="footer-btn">Privacy Policy</a>
+            <a href="{{ url_for('termscondition') }}" class="footer-btn">Terms of Service</a>
+            <a href="{{ url_for('contactus') }}" class="footer-btn">Contact Us</a>
           </div>
           <p class="copyright">&copy;2025 Kidney Stone AI Predictor. All rights reserved.</p>
         </div>
