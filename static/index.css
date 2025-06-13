@@ -91,10 +91,30 @@
     font-family: Arial, sans-serif;
 }
 
-/* .Section2-index
+.Section1-index-p2
+{ 
+    text-align: center;
+    font-size:20px;
+    font-family: Arial, sans-serif;
+}
+
+.div-container
 {
-    padding: 5% 3% 3% 3%;
-} */
+    display: flex;
+    gap: 2rem; 
+    justify-content: center;
+    flex-wrap: wrap; 
+    margin: 2rem;
+}  
+
+.Section2-index
+{
+    padding: 2rem;
+    margin: 3rem;
+    width: 90%;
+    max-width: 500px;
+    text-align: left;
+}
 
 .Section2-index-div1
 {
@@ -104,10 +124,34 @@
     padding: 3% 3% 3% 3%;
     font-size:20px;
     font-family: Arial, sans-serif;
+    
 }
 
-
-
+.Section2-index-div2
+{
+    height: fit-content;
+}
+.text {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    width: 0;
+    animation:
+      typing 5s steps(60, end) forwards,
+      cursor 0.6s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes cursor {
+    50% { border-color: transparent; }
+  }
+  
 /*----------------------------------------- About.html page design -----------------------------------------*/
 .Section1-div
 { 
@@ -195,16 +239,18 @@
 
 /*----------------------------------------- Contact Us page design -----------------------------------------*/
 
-.Section-CU
-{
+.Section-CU {
     background-color: #ffffff;
-    border-radius: 10px;
-    padding-top: 0.1%;
-    padding-left: 5%;
-    margin: 3% 3% 3% 3%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    min-width: 200px;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 3rem;
+    margin-left: 10%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    text-align: left;
 }
+
 
 .Para
 { 
@@ -220,5 +266,5 @@
 
 .Section1-CU-P
 {
-    font-size:25px;
+    font-size:23px;
 }
