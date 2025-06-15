@@ -2,9 +2,10 @@
 .navbar 
 {
     border-radius: 1rem;
-    background-color:#97c6f5;
+    background-color: rgb(145, 200, 235);     
     padding: 1rem 2rem;
 }
+
 .nav-container 
 {
     max-width: 1200px;
@@ -59,33 +60,48 @@
     transition: color 0.3s;
 }
 .footer-btn:hover {
-    color: #2980b9;
+    color: #318ac6;
 }
 .copyright {
     color: #666;
     font-size: 0.9rem;
 }
 
+
+
 /*-----------------------------------------index.html page design----------------------------------------- */
 .Sec
 {
-    background-color:  #97c6f5;
+    background-color: rgb(145, 200, 235);   
     border-radius: 10px;
     padding:2%;
     margin: 5% 3% 3% 3%;
-}
-
-.Section1-content
-{
-    background-color:  #ffffff;
-    border-radius: 1rem;
-    padding: 3% 3% 3% 3%;
-    font-size: 25px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
+.Section1-index
+{
+    background-image: url("/static/photos/KidneyHealthcare.jpg");  /* Correct path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.Section1-content 
+{
+    height: 400px; 
+    border-radius: 1rem;
+    padding: 5%;
+    font-size: 25px;
+    color: #fff;
+}
+
+
 .Section1-index-p 
 { 
+    color:#000;
     text-align: center;
     font-size:30px;
     font-family: Arial, sans-serif;
@@ -93,6 +109,7 @@
 
 .Section1-index-p2
 { 
+    color:#000;
     text-align: center;
     font-size:20px;
     font-family: Arial, sans-serif;
@@ -127,9 +144,11 @@
     
 }
 
-#typing-text {
+#typing-text 
+{   
+    
     font-family: Arial, sans-serif;
-    font-size: 20px;
+    font-size: 22px;
     white-space: pre-wrap;
     overflow-wrap: break-word;
     display: inline-block;
@@ -145,7 +164,7 @@
 /*----------------------------------------- About.html page design -----------------------------------------*/
 .Section1-div
 { 
-  background-color:  #97c6f5;
+  background-color: rgb(145, 200, 235); 
   border-radius: 10px;
   padding:2%;
   margin:7% 5% 0% 5%;
@@ -157,11 +176,18 @@
     color: #ffffff;
 }
 
+.para1
+{
+    font-size:30px;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
 .para
 {
   font-family: Arial, sans-serif;
   font-size:20px;
-  color: #ffffff;
+  /* color: #ffffff; */
 }
 
 .Section2
@@ -186,6 +212,18 @@
 {
   margin:0% 0% 0% 43%;
 }
+
+.steps 
+{
+    
+    list-style-type: none;
+    padding: 0;
+  }
+  .steps li 
+  {
+    margin: 10px 0;
+  }
+
 
 /*----------------------------------------- Privacy and Policy page design -----------------------------------------*/
 
@@ -219,7 +257,6 @@
 { 
     font-family: Arial, sans-serif;
     font-size:20px;
-    font-family: Arial, sans-serif;
 }
 
 .Section-2TC
@@ -229,6 +266,14 @@
 
 /*----------------------------------------- Contact Us page design -----------------------------------------*/
 
+.Section1-CU
+{
+    background-color:  #ffffff;
+    border-radius: 1rem;
+    padding: 3% 3% 3% 3%;
+    font-size: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
 .Section-CU {
     background-color: #ffffff;
     border-radius: 15px;
@@ -240,7 +285,6 @@
     max-width: 500px;
     text-align: left;
 }
-
 
 .Para
 { 
