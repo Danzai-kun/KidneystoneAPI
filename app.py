@@ -5,6 +5,7 @@ from tensorflow.keras.applications.vgg16 import VGG16, preprocess_input
 from tensorflow.keras.preprocessing import image
 import numpy as np
 import uuid
+from flask import jsonify
 
 app = Flask(__name__)
 UPLOAD_FOLDER = 'static/uploads'
@@ -26,17 +27,17 @@ def extract_features(img_path):
     return feature_extractor.predict(img_array)
 
 @app.route('/')
-def index():
-    return render_template('index.html', result=None)
+def home():
+    return render_template('index.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
     if 'image' not in request.files:
-        return render_template('index.html', result="No file uploaded.")
+        return jsonify({'result': "No file uploaded."})
 
     file = request.files['image']
     if file.filename == '':
-        return render_template('index.html', result="No selected file.")
+        return jsonify({'result': "No selected file."})
 
     filename = f"{uuid.uuid4().hex}.jpg"
     file_path = os.path.join(UPLOAD_FOLDER, filename)
@@ -52,7 +53,7 @@ def predict():
             prediction = classifier.predict(features)[0][0]
             result = "Kidney Stone Detected" if prediction > 0.5 else "Normal"
 
-        return render_template('index.html', result=result)
+        return jsonify({'result': result})
 
     finally:
         if os.path.exists(file_path):
