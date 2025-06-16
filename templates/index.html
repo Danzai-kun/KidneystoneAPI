@@ -28,21 +28,20 @@
 <div class="div-container">
   <section class="Sec Section2-index">
     <div class="Section2-index-div1">
-     <h2>Upload CT Scan Image</h2>
+      <h2>Upload CT Scan Image</h2>
 
-    <form id="predict-form" enctype="multipart/form-data">
-      <input type="file" name="image" required>
-        <button type="submit">Predict</button>
-    </form>
+        <form id="predict-form" enctype="multipart/form-data">
+          <input type="file" name="image" required>
+            <button type="submit">Predict</button>
+        </form>
     
-    <section class="result-section" id="prediction-result" style="display: none;">
-      <div class="result-box">
-        <h3 class="para">Prediction Result:</h3>
-        <p class="para" id="result-text"></p>
-      </div>
-    </section>
-    
-      </div>
+        <section class="result-section" id="prediction-result" style="display: none;">
+          <div class="result-box">
+            <h3 class="para">Prediction Result:</h3>
+              <p class="para" id="result-text"></p>
+          </div>
+        </section>
+    </div>
   </section>
 
   <section class="Sec Section2-index">
@@ -85,6 +84,5 @@
 
   <script src="{{ url_for('static', filename='index.js') }}"></script>
 
-  
 </body>
 </html>
